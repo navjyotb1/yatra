@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class visa {
     @GetMapping("/myvisa")
     public String getData(){
-        return "Please submit your visa applications here";
+        return "Please submit your visa applications here as soon as possible";
     }
 }
