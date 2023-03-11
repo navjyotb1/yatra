@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class Cab {
     @GetMapping("/myCab")
     public String getData(){
-        return "Please book your cab Here";
+        return "Please book your cab or cycle Here";
     }
 }
