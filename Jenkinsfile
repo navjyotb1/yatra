@@ -6,29 +6,29 @@ agent any
     maven 'mvn_3.8.7'
  }
 stages {
-    stage ('check java version'){
+    stage ('1 check java version'){
         steps  {
-		"sh java --version"
+		sh 'java --version'
          }
          }
-     stage ('code compile'){
+     stage ('2 code compile'){
         steps  {
-		"sh mvn clean compile"
+		sh 'mvn clean compile'
         }
         }
-        stage ('code Test'){
+        stage ('3 code Test'){
         steps  {
-		"sh mvn clean test"
+		sh 'mvn clean test'
         }
         }
-        stage ('code package'){
+        stage ('4 code package'){
         steps  {
-		"sh mvn clean package"
+		sh 'mvn clean package'
         }
         }
-        stage ('code compile'){
+        stage ('5 code compile'){
         steps  {
-		"sh mvn clean compile"
+		sh 'mvn clean compile'
         }
 
         }
