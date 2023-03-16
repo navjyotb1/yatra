@@ -3,30 +3,24 @@ pipeline {
     maven 'mvn_3.8.7'
  }
 stages {
-stage {
-steps ('check java version') {
+    stage {
+        steps ('check java version') {
 		"sh java --version"
-
-}
-steps ('code compile') {
+         }
+        steps ('code compile') {
 		"sh mvn clean compile"
-
-}
-steps ('code Test') {
+        }
+        steps ('code Test') {
 		"sh mvn clean test"
-
-}
-steps ('code package') {
+        }
+        steps ('code package') {
 		"sh mvn clean package"
-
-}
-steps ('code compile') {
+        }
+        steps ('code compile') {
 		"sh mvn clean compile"
+        }
 
-}
+        }
 
-
-}
-
-}
+    }
 }
