@@ -1,7 +1,5 @@
-
-
 pipeline {
-stages{
+stages {
 stage {
 steps ('check java version') {
 		"sh java --version"
