@@ -1,4 +1,7 @@
 pipeline {
+ tools {
+    maven 'mvn_3.8.7'
+ }
 stages {
 stage {
 steps ('check java version') {
