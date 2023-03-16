@@ -1,22 +1,33 @@
 pipeline {
+
+agent any
+
  tools {
     maven 'mvn_3.8.7'
  }
 stages {
-    stage {
-        steps ('check java version') {
+    stage ('check java version'){
+        steps  {
 		"sh java --version"
          }
-        steps ('code compile') {
+         }
+     stage ('code compile'){
+        steps  {
 		"sh mvn clean compile"
         }
-        steps ('code Test') {
+        }
+        stage ('code Test'){
+        steps  {
 		"sh mvn clean test"
         }
-        steps ('code package') {
+        }
+        stage ('code package'){
+        steps  {
 		"sh mvn clean package"
         }
-        steps ('code compile') {
+        }
+        stage ('code compile'){
+        steps  {
 		"sh mvn clean compile"
         }
 
