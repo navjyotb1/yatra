@@ -1,4 +1,5 @@
-FROM tomcat:latest-jre11-alpine
+# Pull tomcat latest image compatible with jre11-alpine
+FROM tomcat:8.0.51-jre8-alpine
 MAINTAINER satyam@gmail.com
 # copy war file on to container
 COPY ./target/yatra-ms*.jar  /usr/local/tomcat/webapps
