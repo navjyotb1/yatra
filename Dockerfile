@@ -2,7 +2,7 @@
 FROM tomcat:8.0.51-jre8-alpine
 MAINTAINER satyam@gmail.com
 # copy war file on to container
-COPY ./target/yatra-ms*.jar  /usr/local/tomcat/webapps
+COPY ./target/yatra*.jar  /usr/local/tomcat/webapps
 EXPOSE  8080
 USER bookmytrip
 WORKDIR /usr/local/tomcat/webapps
