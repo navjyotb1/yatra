@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class bus {
     @GetMapping("/mybus")
     public String getData(){
-        return "Please book your ticket,AALIYA EXPRESS LINES";
+        return "Please book your ticket,rapido EXPRESS LINES";
     }
 
 }
